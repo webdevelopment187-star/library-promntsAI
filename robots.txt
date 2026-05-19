@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap:
+https://webdevelopment187-star.github.io/library-promntsAI/sitemap.xml
