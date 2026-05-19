@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+
+    <!-- PRIMARY SEO -->
+    <title>
+        AI Prompt Masterpiece | Prompt AI Premium untuk ChatGPT & Bisnis
+    </title>
+
+    <meta
+        name="description"
+        content="Koleksi prompt AI premium untuk ChatGPT, marketing, copywriting, SEO, bisnis, dan content creator."
+    />
+
+    <meta
+        name="keywords"
+        content="
+        AI Prompt,
+        ChatGPT Prompt,
+        Prompt Premium,
+        Prompt Marketing,
+        Prompt SEO,
+        Prompt Copywriting,
+        Prompt Indonesia,
+        AI Tools
+        "
+    />
+
+    <meta name="author" content="AI Prompt Masterpiece" />
+
+    <!-- GOOGLE -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- OPEN GRAPH -->
+    <meta
+        property="og:title"
+        content="AI Prompt Masterpiece"
+    />
+
+    <meta
+        property="og:description"
+        content="Koleksi prompt AI premium untuk bisnis, marketing, dan content creator."
+    />
+
+    <meta
+        property="og:type"
+        content="website"
+    />
+
+    <meta
+        property="og:image"
+        content="preview.png"
+    />
+
+    <!-- TWITTER -->
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    />
+
+    <meta
+        name="twitter:title"
+        content="AI Prompt Masterpiece"
+    />
+
+    <meta
+        name="twitter:description"
+        content="Prompt AI premium siap pakai untuk ChatGPT dan bisnis."
+    />
+
+    <!-- FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
+        rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- SUPABASE -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+
+<body>
+
+  <!-- MOBILE TOPBAR -->
+<div class="mobile-topbar">
+
+    <button
+        class="mobile-menu-btn"
+        onclick="toggleSidebar()"
+    >
+        ☰
+    </button>
+
+    <div class="mobile-logo">
+        ✨ PromptAI
+    </div>
+
+</div>
+
+<!-- OVERLAY -->
+<div
+    class="sidebar-overlay"
+    onclick="closeSidebar()"
+></div>
+
+    <!-- OVERLAY -->
+    <div class="sidebar-overlay" onclick="closeSidebar()"></div>
+
+    <div class="app-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <div class="logo">
+                ✨ PromptAI
+            </div>
+
+            <nav class="sidebar-menu">
+
+    <button 
+        class="sidebar-item active"
+        onclick="filterCategory('all', this)"
+    >
+        🏠 Dashboard
+    </button>
+
+    <button 
+        class="sidebar-item"
+        onclick="filterCategory('Copywriting', this)"
+    >
+        ✍️ Copywriting
+    </button>
+
+    <button 
+        class="sidebar-item"
+        onclick="filterCategory('Desain', this)"
+    >
+        🎨 Design
+    </button>
+
+    <button 
+        class="sidebar-item"
+        onclick="filterCategory('SEO', this)"
+    >
+        📈 SEO
+    </button>
+
+    <button 
+        class="sidebar-item"
+        onclick="filterCategory('Ecommerce', this)"
+    >
+        🛍️ Ecommerce
+    </button>
+    
+    <a href="article.html" class="category-btn">
+    📚 Blog
+</a>
+
+</nav>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <header>
+
+                <h1>AI Prompt Masterpiece</h1>
+
+                <p>
+                    Akses koleksi prompt premium siap pakai untuk memudahkan pekerjaanmu.
+                
+                </p>
+
+            </header>
+
+            <!-- SEARCH -->
+            <div class="search-wrapper">
+
+                <span class="search-icon">
+                    🔍
+                </span>
+
+                <input 
+                    type="text"
+                    id="searchBar"
+                    class="search-bar"
+                    placeholder="Cari prompt AI..."
+                    onkeyup="filterPrompts()"
+                >
+
+            </div>
+
+            <!-- CATEGORY -->
+            <div class="categories">
+
+                <button 
+                    class="category-btn active"
+                    onclick="filterCategory('all', this)"
+                >
+                    ✨ All Prompts
+                </button>
+
+                <button
+                    class="category-btn"
+                    onclick="filterCategory('Copywriting', this)"
+                >
+                    ✍️ Copywriting
+                </button>
+
+                <button
+                    class="category-btn"
+                    onclick="filterCategory('Desain', this)"
+                >
+                    🎨 Desain
+                </button>
+
+                <button
+                    class="category-btn"
+                    onclick="filterCategory('Ide Konten', this)"
+                >
+                    💡 Ide Konten
+                </button>
+
+                <button
+                    class="category-btn"
+                    onclick="filterCategory('SEO', this)"
+                >
+                    📈 SEO
+                </button>
+
+                <button
+                    class="category-btn"
+                    onclick="filterCategory('Ecommerce', this)"
+                >
+                    🛍️ Ecommerce
+                </button>
+
+            </div>
+
+            <!-- PROMPT GRID -->
+            <div class="prompt-grid" id="promptContainer">
+
+                <p class="loading">
+                    Memuat data prompt...
+                </p>
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+    <div id="toast" class="toast">
+        Prompt berhasil disalin 🚀
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
